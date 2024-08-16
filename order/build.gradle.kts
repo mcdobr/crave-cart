@@ -5,7 +5,7 @@ plugins {
 	kotlin("plugin.spring") version "1.9.24"
 }
 
-group = "me.mcdobr"
+group = "me.mcdobr.cravecart"
 version = "0.0.1-SNAPSHOT"
 
 java {

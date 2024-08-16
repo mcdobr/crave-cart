@@ -1,4 +1,4 @@
-package me.mcdobr.cravecart.vo
+package me.mcdobr.cravecart.order.vo
 
 data class ProductOffer(
     val name: String,

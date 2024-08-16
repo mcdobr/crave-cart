@@ -1,6 +1,6 @@
-package me.mcdobr.cravecart.controller
+package me.mcdobr.cravecart.order.controller
 
-import me.mcdobr.cravecart.vo.ProductOffer
+import me.mcdobr.cravecart.order.vo.ProductOffer
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
