@@ -5,3 +5,4 @@ plugins {
 include("order")
 include("cart")
 include("webapp")
+include("catalog")
