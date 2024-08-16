@@ -4,3 +4,4 @@ plugins {
 //rootProject.name = "cravecart"
 include("order")
 include("cart")
+include("webapp")
