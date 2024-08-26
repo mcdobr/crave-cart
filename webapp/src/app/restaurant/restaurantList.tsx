@@ -1,19 +1,23 @@
+type RestaurantDto = {
+    id: number;
+    name: string;
+}
+
+async function getRestaurants() {
+    return await fetch('https://jsonplaceholder.typicode.com/todos/1')
+          .then(response => response.json())
+          .then(json => {
+              console.log(json);
+              return json;
+          })
+          .then(restaurant => <li key={restaurant.userId}>{restaurant.id}</li>)
+          .catch(error => console.warn(error));
+};
+
 export default function RestaurantList() {
-    const restaurants = [
-        {
-            id: 1,
-            name: 'Restaurant 1',
-        },
-        {
-            id: 2,
-            name: 'Restaurant 2'
-        },
-    ];
-    const restaurantListItems = restaurants.map(restaurant => <li key={restaurant.name}>{restaurant.name}</li>);
+    const restaurantListItems = getRestaurants();
 
     return (
-        <>
-            <ul>{restaurantListItems}</ul>
-        </>
+        <ul>{restaurantListItems}</ul>
     )
 }
