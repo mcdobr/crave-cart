@@ -1,12 +1,14 @@
-import Image from "next/image";
-import Profile from "@/app/profile/profile";
+import Header from "@/app/components/header";
 import RestaurantList from "@/app/restaurant/restaurantList";
 
 export default function Home() {
     return (
-        <main className="flex min-h-screen flex-col items-center justify-between p-24">
-            <Profile/>
-            <RestaurantList/>
-        </main>
+        <>
+            <Header/>
+
+            <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-green-300">
+                <RestaurantList/>
+            </main>
+        </>
     );
 }

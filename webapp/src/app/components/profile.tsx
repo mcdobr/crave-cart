@@ -6,17 +6,13 @@ export default function Profile() {
     };
 
     return (
-        <>
-            <h1>{user.name}</h1>
+        <div className="flex items-center w-64 h-24 bg-indigo-500">
             <img
-                className="avatar"
+                className="w-16 h-16 rounded-full"
                 src={user.imageUrl}
                 alt={'Photo of ' + user.name}
-                style={{
-                    width: user.imageSize,
-                    height: user.imageSize,
-                }}
             />
-        </>
+            <span>{user.name}</span>
+        </div>
         );
 }
