@@ -4,5 +4,5 @@ plugins {
 rootProject.name = "crave-cart"
 include(":services:order")
 include(":services:cart")
-include("webapp")
 include(":services:catalog")
+include(":clients:webapp")
