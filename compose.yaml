@@ -1,3 +1,19 @@
 services:
   kafka:
     image: apache/kafka
+  vault:
+    image: hashicorp/vault
+    ports:
+      - "8200:8200"
+    volumes:
+      - vault-data:/vault/data
+    cap_add:
+      - IPC_LOCK
+
+volumes:
+  vault-data:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./infrastructure/volumes/vault
+      o: bind

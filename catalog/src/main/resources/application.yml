@@ -1,5 +1,25 @@
 server:
   port: 8083
 spring:
+  application.name: catalog
+  cloud:
+    vault:
+      enabled: true
+      uri: ${VAULT_URI}
+      token: ${CATALOG_SHELF_TOKEN}
+      authentication:
+        method: TOKEN
+      kv:
+        enabled: true
+        backend: secret
+        default-context: ${spring.application.name}
+        application-name: ${spring.application.name}
+  config:
+    import: vault://
   jpa:
     open-in-view: false
+  profiles.active: vault
+logging.level:
+  org.springframework.cloud.vault: DEBUG           # Logs Vault-related activities
+  org.springframework.web.client: DEBUG            # Logs HTTP requests/responses to Vault
+  org.springframework.boot: DEBUG
