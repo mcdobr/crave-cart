@@ -1,8 +1,8 @@
 plugins {
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.8.0"
 }
-//rootProject.name = "cravecart"
-include("order")
-include("cart")
+rootProject.name = "crave-cart"
+include(":services:order")
+include(":services:cart")
 include("webapp")
-include("catalog")
+include(":services:catalog")
