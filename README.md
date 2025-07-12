@@ -13,6 +13,16 @@ This is only intended for the author's personal learning.
 - React
 - Micro-frontends
 
+# Big picture architecture
+
+## Services
+
+- cart - manage the user's cart. REST API in FaaS
+- catalog - manage restaurant offers. REST API in FaaS
+- order - manage order state. REST API in FaaS
+- delivery tracking - real time updates on delivery location. WebSockets API in container
+
+
 # Folder structure
 
 This is a rough outline of the structure of the projects, separating components. Since this is a repo for learning 
