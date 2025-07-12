@@ -6,3 +6,5 @@ include(":services:order")
 include(":services:cart")
 include(":services:catalog")
 include(":clients:webapp")
+include("services:delivery-tracking")
+findProject(":services:delivery-tracking")?.name = "delivery-tracking"
