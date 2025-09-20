@@ -1,5 +1,9 @@
+import { randomUUID } from "crypto";
+import Link from "next/link";
+
 export default function Profile() {
     const user = {
+        id: randomUUID(),
         name: 'Mircea',
         imageUrl: 'https://i.imgur.com/8uq1yHb.jpeg',
         imageSize: 90,
@@ -12,7 +16,10 @@ export default function Profile() {
                 src={user.imageUrl}
                 alt={'Photo of ' + user.name}
             />
-            <span>{user.name}</span>
+            <Link href={`/profile`}>
+                <span>{user.name}</span>
+            </Link>
         </div>
         );
 }
+

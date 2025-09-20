@@ -1,5 +1,5 @@
-import Header from "@/app/components/header";
-import RestaurantList from "@/app/restaurant/restaurantList";
+import Header from "@/app/ui/Header";
+import RestaurantList from "./restaurant/page";
 
 export default function Home() {
     return (
@@ -7,7 +7,7 @@ export default function Home() {
             <Header/>
 
             <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-green-300">
-                <RestaurantList/>
+                <RestaurantList />
             </main>
         </>
     );
