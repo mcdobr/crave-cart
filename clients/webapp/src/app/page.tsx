@@ -1,5 +1,5 @@
 import Header from "@/app/ui/Header";
-import RestaurantList from "./restaurant/page";
+import RestaurantList from "./ui/RestaurantList";
 
 export default function Home() {
     return (
