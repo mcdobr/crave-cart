@@ -1,4 +1,4 @@
-import Profile from "@/app/components/profile";
+import Profile from "@/app/ui/Profile";
 
 export default function Header() {
     return (
