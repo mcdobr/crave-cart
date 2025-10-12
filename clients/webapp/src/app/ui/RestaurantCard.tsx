@@ -1,4 +1,4 @@
-import { RestaurantDto } from "../restaurant/page";
+import { RestaurantDto } from "../../types/RestaurantDto";
 
 export const RestaurantCard = (restaurant: RestaurantDto) => {
     return (

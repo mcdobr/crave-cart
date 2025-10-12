@@ -1,10 +1,4 @@
-
-export type RestaurantDto = {
-    id: number;
-    name: string;
-    imageUrl: string;
-    rating: number;
-}
+import { RestaurantDto } from "../../types/RestaurantDto";
 
 const restaurantsRepository: RestaurantDto[] = [
     { id: 1, name: "Pizza Place", imageUrl: "https://via.placeholder.com/150", rating: 4 },
@@ -32,5 +26,3 @@ const restaurantsRepository: RestaurantDto[] = [
 export async function getRestaurants(): Promise<RestaurantDto[]> {
     return await Promise.resolve(restaurantsRepository);
 }
-
-

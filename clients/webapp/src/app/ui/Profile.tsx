@@ -1,13 +1,12 @@
-import { randomUUID } from "crypto";
+import logger from "@/lib/logger";
 import Link from "next/link";
+import { getMyProfile } from "../profile/page";
 
-export default function Profile() {
-    const user = {
-        id: randomUUID(),
-        name: 'Mircea',
-        imageUrl: 'https://i.imgur.com/8uq1yHb.jpeg',
-        imageSize: 90,
-    };
+export default async function Profile() {
+    const user = await getMyProfile();
+    if (logger.isLevelEnabled('debug')) {
+        logger.debug({user}, 'Loaded user profile');
+    }
 
     return (
         <div className="flex items-center w-64 h-24 bg-indigo-500">
@@ -22,4 +21,3 @@ export default function Profile() {
         </div>
         );
 }
-
