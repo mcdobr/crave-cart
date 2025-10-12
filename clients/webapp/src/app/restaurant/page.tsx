@@ -31,13 +31,6 @@ const restaurantsRepository: RestaurantDto[] = [
 
 export async function getRestaurants(): Promise<RestaurantDto[]> {
     return await Promise.resolve(restaurantsRepository);
-    // return await fetch('https://jsonplaceholder.typicode.com/todos')
-    //     .then(response => response.json())
-    //     .then(json => {
-    //         console.log(json);
-    //         return json;
-    //     })
-    //     .catch(error => console.warn(error));
 }
 
 
